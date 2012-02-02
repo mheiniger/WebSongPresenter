@@ -99,8 +99,8 @@
                                 "layout": "vbox",
                                 "title": null,
                                 "designer|userClassName": "MyPanel1",
-                                "layout|region": "west",
-                                "container|align": "stretch"
+                                "container|align": "stretch",
+                                "layout|region": "west"
                             },
                             "cn": [
                                 {
@@ -163,7 +163,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "width": 150,
                                 "designer|userClassName": "MyToolbar",
+                                "layout|region": "east",
                                 "dock": "top"
                             },
                             "cn": [
@@ -198,7 +200,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "autoLoad": true,
                 "storeId": "MyJsonStore",
                 "designer|userClassName": "MyJsonStore"
             },
@@ -240,7 +241,6 @@
             },
             "codeClass": null,
             "userConfig": {
-                "autoLoad": true,
                 "storeId": "MyJsonStore1",
                 "designer|userClassName": "MyJsonStore1"
             },
