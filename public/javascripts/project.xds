@@ -1,0 +1,278 @@
+{
+    "name": "project.xds",
+    "settings": {
+        "urlPrefix": "http://localhost/",
+        "directAPI": "",
+        "spacesToIndent": 4,
+        "codeGenFormat": "Class",
+        "exportPath": ".",
+        "extPath": "http://extjs.cachefly.net/ext-4.0.2a/",
+        "lineEnding": "CRLF",
+        "instantiateStore": true,
+        "exportXDSFiles": true,
+        "genTimestamps": true,
+        "appName": "MyApp"
+    },
+    "xdsVersion": "1.2.2",
+    "components": [
+        {
+            "id": "ExtBox1-ext-gen1666",
+            "type": "viewport",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "layout": "fit",
+                "designer|userClassName": "MyViewport"
+            },
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen1728",
+                    "type": "panel",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "layout": "border",
+                        "title": "Web Song Presenter",
+                        "designer|userClassName": "MyPanel"
+                    },
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen1869",
+                            "type": "gridpanel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "title": "Lied",
+                                "hideHeaders": true,
+                                "store": "MyJsonStore1",
+                                "designer|userClassName": "MyGridPanel",
+                                "layout|region": "center"
+                            },
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen1885",
+                                    "type": "gridcolumn",
+                                    "reference": {
+                                        "name": "columns",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dataIndex": "string",
+                                        "text": "String",
+                                        "designer|userClassName": "MyColumn"
+                                    }
+                                },
+                                {
+                                    "id": "ExtBox1-ext-gen1913",
+                                    "type": "gridview",
+                                    "reference": {
+                                        "name": "viewConfig",
+                                        "type": "object"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "designer|userClassName": "MyGridView"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen4236",
+                            "type": "panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "width": 150,
+                                "layout": "vbox",
+                                "title": null,
+                                "designer|userClassName": "MyPanel1",
+                                "layout|region": "west",
+                                "container|align": "stretch"
+                            },
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen2599",
+                                    "type": "gridpanel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "width": 150,
+                                        "title": "Reihenfolge",
+                                        "hideHeaders": true,
+                                        "store": "MyJsonStore",
+                                        "designer|userClassName": "MyGridPanel1",
+                                        "layout|flex": 1
+                                    },
+                                    "cn": [
+                                        {
+                                            "id": "ExtBox1-ext-gen2616",
+                                            "type": "gridcolumn",
+                                            "reference": {
+                                                "name": "columns",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "dataIndex": "string",
+                                                "flex": 1,
+                                                "text": "String",
+                                                "designer|userClassName": "MyColumn1"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "id": "ExtBox1-ext-gen5164",
+                                    "type": "panel",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "height": 200,
+                                        "width": 148,
+                                        "title": "Vorschau",
+                                        "designer|userClassName": "MyPanel2"
+                                    }
+                                }
+                            ]
+                        },
+                        {
+                            "id": "ExtBox1-ext-gen7142",
+                            "type": "toolbar",
+                            "reference": {
+                                "name": "dockedItems",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "MyToolbar",
+                                "dock": "top"
+                            },
+                            "cn": [
+                                {
+                                    "id": "ExtBox1-ext-gen7550",
+                                    "type": "button",
+                                    "reference": {
+                                        "name": "items",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "text": "Datei",
+                                        "designer|userClassName": "MyButton",
+                                        "layout|flex": null
+                                    }
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "stores": [
+        {
+            "id": "ExtBox1-ext-gen8680",
+            "type": "jsonstore",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoLoad": true,
+                "storeId": "MyJsonStore",
+                "designer|userClassName": "MyJsonStore"
+            },
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen8684",
+                    "type": "ajaxproxy",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "Ajax Proxy"
+                    },
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen8690",
+                            "type": "jsonreader",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "Json Reader"
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen9029",
+            "type": "jsonstore",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoLoad": true,
+                "storeId": "MyJsonStore1",
+                "designer|userClassName": "MyJsonStore1"
+            },
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen9033",
+                    "type": "ajaxproxy",
+                    "reference": {
+                        "name": "proxy",
+                        "type": "object"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "designer|userClassName": "Ajax Proxy1"
+                    },
+                    "cn": [
+                        {
+                            "id": "ExtBox1-ext-gen9039",
+                            "type": "jsonreader",
+                            "reference": {
+                                "name": "reader",
+                                "type": "object"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "designer|userClassName": "Json Reader1"
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "framework": "ext40"
+}
