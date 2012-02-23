@@ -1,0 +1,19 @@
+{
+    "total": 2,
+    "success": true,
+    "rows": [
+    {
+        "id" : 1, 
+        "strophe" : "Strophe 1", 
+        "textLang1" : "Ein Text 1", 
+        "textLang2" : "A text 1"
+    },
+
+    {
+        "id" : 2, 
+        "strophe" : "Strophe 2", 
+        "textLang1" : "Ein Text 2", 
+        "textLang2" : "A text 2"
+    }
+    ]
+}

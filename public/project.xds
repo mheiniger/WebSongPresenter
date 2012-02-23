@@ -1,9 +1,9 @@
 {
     "name": "project.xds",
     "settings": {
-        "urlPrefix": "http://localhost/",
+        "urlPrefix": "http://localhost:3000/",
         "directAPI": "",
-        "spacesToIndent": 4,
+        "spacesToIndent": "4",
         "codeGenFormat": "Class",
         "exportPath": ".",
         "extPath": "http://extjs.cachefly.net/ext-4.0.2a/",
@@ -11,7 +11,7 @@
         "instantiateStore": true,
         "exportXDSFiles": true,
         "genTimestamps": true,
-        "appName": "MyApp"
+        "appName": "Web Song Presenter"
     },
     "xdsVersion": "1.2.2",
     "components": [
@@ -24,8 +24,9 @@
             },
             "codeClass": null,
             "userConfig": {
-                "layout": "fit",
-                "designer|userClassName": "MyViewport"
+                "layout": "hbox",
+                "designer|userClassName": "Viewport",
+                "container|align": "stretch"
             },
             "cn": [
                 {
@@ -37,6 +38,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "width": 778,
                         "layout": "border",
                         "title": "Web Song Presenter",
                         "designer|userClassName": "MyPanel"
@@ -52,8 +54,8 @@
                             "codeClass": null,
                             "userConfig": {
                                 "title": "Lied",
-                                "hideHeaders": true,
-                                "store": "songStore",
+                                "hideHeaders": null,
+                                "store": "SongStore",
                                 "designer|userClassName": "MyGridPanel",
                                 "layout|region": "center"
                             },
@@ -93,6 +95,7 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "width": 90,
                                         "dataIndex": "strophe",
                                         "text": "Strophe",
                                         "designer|userClassName": "MyColumn3"
@@ -107,6 +110,7 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "width": 218,
                                         "dataIndex": "textLang1",
                                         "text": "TextLang1",
                                         "designer|userClassName": "MyColumn4"
@@ -121,6 +125,7 @@
                                     },
                                     "codeClass": null,
                                     "userConfig": {
+                                        "width": 214,
                                         "dataIndex": "textLang2",
                                         "text": "TextLang2",
                                         "designer|userClassName": "MyColumn5"
@@ -156,8 +161,8 @@
                                     "userConfig": {
                                         "width": 150,
                                         "title": "Reihenfolge",
-                                        "hideHeaders": true,
-                                        "store": "presentationStore",
+                                        "hideHeaders": null,
+                                        "store": "PresentationStore",
                                         "designer|userClassName": "MyGridPanel1",
                                         "layout|flex": 1
                                     },
@@ -186,27 +191,13 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
+                                                "width": 116,
                                                 "dataIndex": "title",
                                                 "text": "Title",
                                                 "designer|userClassName": "MyColumn6"
                                             }
                                         }
                                     ]
-                                },
-                                {
-                                    "id": "ExtBox1-ext-gen5164",
-                                    "type": "panel",
-                                    "reference": {
-                                        "name": "items",
-                                        "type": "array"
-                                    },
-                                    "codeClass": null,
-                                    "userConfig": {
-                                        "height": 200,
-                                        "width": 148,
-                                        "title": "Vorschau",
-                                        "designer|userClassName": "MyPanel2"
-                                    }
                                 }
                             ]
                         },
@@ -219,7 +210,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "width": 150,
                                 "designer|userClassName": "MyToolbar",
+                                "layout|region": "east",
                                 "dock": "top"
                             },
                             "cn": [
@@ -277,7 +270,9 @@
                             },
                             "codeClass": null,
                             "userConfig": {
+                                "height": 55,
                                 "designer|userClassName": "MyToolbar1",
+                                "layout|region": "north",
                                 "dock": "top"
                             },
                             "cn": [
@@ -307,6 +302,7 @@
                                         "title": "Screen",
                                         "columns": 3,
                                         "designer|userClassName": "MyButtonGroup",
+                                        "container|columns": 3,
                                         "layout|flex": null
                                     },
                                     "cn": [
@@ -319,6 +315,8 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
+                                                "id": "screenOffButton",
+                                                "itemId": "screenOffButton",
                                                 "text": "Off",
                                                 "designer|userClassName": "MyButton1"
                                             }
@@ -332,6 +330,8 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
+                                                "id": "screenBlackButton",
+                                                "itemId": "screenBlackButton",
                                                 "text": "Black",
                                                 "designer|userClassName": "MyButton2"
                                             }
@@ -345,6 +345,8 @@
                                             },
                                             "codeClass": null,
                                             "userConfig": {
+                                                "id": "screenPresentationButton",
+                                                "itemId": "screenPresentationButton",
                                                 "text": "Presentation",
                                                 "designer|userClassName": "MyButton3"
                                             }
@@ -354,6 +356,41 @@
                             ]
                         }
                     ]
+                }
+            ]
+        },
+        {
+            "id": "ExtBox1-ext-gen4036",
+            "type": "window",
+            "reference": {
+                "name": "items",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "autoShow": true,
+                "height": 250,
+                "width": 400,
+                "layout": "fit",
+                "title": "Vorschau",
+                "designer|userClassName": "previewWindow"
+            },
+            "cn": [
+                {
+                    "id": "ExtBox1-ext-gen5174",
+                    "type": "component",
+                    "reference": {
+                        "name": "items",
+                        "type": "array"
+                    },
+                    "codeClass": null,
+                    "userConfig": {
+                        "autoEl": null,
+                        "autoRender": null,
+                        "autoShow": null,
+                        "html": "<iframe style=\"overflow:auto;width:100%;height:100%;\" frameborder=\"0\"  src=\"/view\"></iframe>",
+                        "designer|userClassName": "MyComponent"
+                    }
                 }
             ]
         }
@@ -368,7 +405,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "storeId": "presentationStore",
+                "autoLoad": true,
+                "storeId": "PresentationStore",
                 "designer|userClassName": "PresentationStore"
             },
             "cn": [
@@ -381,6 +419,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "url": "mock/examplePresentationStore.json",
                         "designer|userClassName": "Ajax Proxy"
                     },
                     "cn": [
@@ -436,7 +475,8 @@
             },
             "codeClass": null,
             "userConfig": {
-                "storeId": "songStore",
+                "autoLoad": true,
+                "storeId": "SongStore",
                 "designer|userClassName": "SongStore"
             },
             "cn": [
@@ -449,6 +489,7 @@
                     },
                     "codeClass": null,
                     "userConfig": {
+                        "url": "mock/exampleSongStore.json",
                         "designer|userClassName": "Ajax Proxy1"
                     },
                     "cn": [

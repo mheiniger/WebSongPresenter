@@ -1,9 +1,6 @@
-<link rel="stylesheet" type="text/css" href="http://extjs.cachefly.net/ext-4.0.2a/resources/css/ext-all.css"/>
-<script type="text/javascript" src="http://extjs.cachefly.net/ext-4.0.2a/ext-all-debug.js"></script>
 <script type="text/javascript" src="app/view/ui/Viewport.js"></script>
 <script type="text/javascript" src="app/view/Viewport.js"></script>
 <script type="text/javascript" src="app/view/ui/previewWindow.js"></script>
 <script type="text/javascript" src="app/view/previewWindow.js"></script>
 <script type="text/javascript" src="app/store/PresentationStore.js"></script>
 <script type="text/javascript" src="app/store/SongStore.js"></script>
-<script type="text/javascript" src="designer.js"></script>
