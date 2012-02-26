@@ -1,1 +1,17 @@
+<script src="/socket.io/socket.io.js"></script>
+<script>
+    var socket = io.connect('http://localhost');
+    socket.on('message', function (data) {
+        if (data == "screen:black"){    
+            document.getElementsByTagName("body")[0].style.backgroundColor = "#000000";
+        }
+        if (data == "screen:off"){    
+            document.getElementsByTagName("body")[0].style.backgroundColor = "#FFFFFF";
+        }
+        if (data == "screen:presentation"){    
+            document.getElementsByTagName("body")[0].style.backgroundColor = "#FF0000";
+        }
+    });
+</script>
+
 Anzeige (Vollbild mit F11)

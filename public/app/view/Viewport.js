@@ -24,15 +24,15 @@ Ext.define('Web Song Presenter.view.Viewport', {
     },
     
     screenBlackButtonClick: function(button) {
-        alert(button.text + ' geklickt');
+        socket.emit('message', 'screen:black');
     },
     
     screenOffButtonClick: function(button) {
-        alert(button.text + ' geklickt');
+        socket.emit('message', 'screen:off');
     },
     
     screenPresentationButtonClick: function(button) {
-        alert(button.text + ' geklickt');
+        socket.emit('message', 'screen:presentation');
     }
     
 });
