@@ -1,6 +1,6 @@
 <script src="/socket.io/socket.io.js"></script>
 <script>
-    var socket = io.connect('http://localhost');
+    var socket = io.connect('http://' + window.location.host);
     socket.on('message', function (data) {
         if (data == "screen:black"){    
             document.getElementsByTagName("body")[0].style.backgroundColor = "#000000";
