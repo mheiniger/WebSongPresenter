@@ -300,9 +300,9 @@
                                     "userConfig": {
                                         "width": null,
                                         "title": "Screen",
-                                        "columns": 3,
+                                        "columns": 4,
                                         "designer|userClassName": "MyButtonGroup",
-                                        "container|columns": 3,
+                                        "container|columns": 4,
                                         "layout|flex": null
                                     },
                                     "cn": [
@@ -349,6 +349,21 @@
                                                 "itemId": "screenPresentationButton",
                                                 "text": "Presentation",
                                                 "designer|userClassName": "MyButton3"
+                                            }
+                                        },
+                                        {
+                                            "id": "ExtBox1-ext-gen2564",
+                                            "type": "button",
+                                            "reference": {
+                                                "name": "items",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "height": null,
+                                                "id": "screenReloadButton",
+                                                "text": "Reload",
+                                                "designer|userClassName": "MyButton4"
                                             }
                                         }
                                     ]

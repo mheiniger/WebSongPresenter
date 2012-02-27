@@ -21,6 +21,7 @@ Ext.define('Web Song Presenter.view.Viewport', {
         me.down('#screenBlackButton').on('click', this.screenBlackButtonClick, this);
         me.down('#screenOffButton').on('click', this.screenOffButtonClick, this);
         me.down('#screenPresentationButton').on('click', this.screenPresentationButtonClick, this);
+        me.down('#screenReloadButton').on('click', this.refreshButtonClick, this);
     },
     
     screenBlackButtonClick: function(button) {
@@ -33,6 +34,9 @@ Ext.define('Web Song Presenter.view.Viewport', {
     
     screenPresentationButtonClick: function(button) {
         socket.emit('message', 'screen:presentation');
-    }
+    },
     
+    refreshButtonClick: function(button) {
+        socket.emit('message', 'screen:reload');
+    }
 });

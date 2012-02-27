@@ -9,16 +9,23 @@
         var socket = io.connect('http://' + window.location.host);
         socket.on('message', function (data) {
             if (data == "screen:black"){    
-                document.getElementsByTagName("body")[0].style.backgroundColor = "#000000";
+                document.body.style.backgroundColor = "#000000";
+                document.body.style.backgroundImage = "none";
                 document.getElementById("content").style.display = "none";
             }
             if (data == "screen:off"){    
-                document.getElementsByTagName("body")[0].style.backgroundColor = "#FFFFFF";
+                document.body.style.backgroundColor = "#FFFFFF";
+                document.body.style.backgroundImage = "none";
                 document.getElementById("content").style.display = "none";
             }
             if (data == "screen:presentation"){    
-                document.getElementsByTagName("body")[0].style.backgroundColor = "#FF0000";
+                document.body.style.backgroundColor = "#FF0000";
+                document.body.style.backgroundImage = "url('images/clouds-chm8.jpg')";
                 document.getElementById("content").style.display = "block";
+                
+            }
+            if (data == "screen:reload"){    
+                window.location.href = "";                
             }
         });
         var resizeMe = function(){
@@ -36,6 +43,10 @@
     <style type="text/css">
         #content { line-height: 1.5em}
         #content p { margin: 1px; text-align: center; }
+        body {
+            background-image: url("images/clouds-chm8.jpg");
+            background-size: 100% auto;
+        }
     </style>
   </head>
   <body style="Helvetica,Arial,sans-serif" onload="fontsize = 84;resizeMe();">
@@ -43,8 +54,8 @@
         <p>That's why I praise you<br />
                 in the morning<br />
                 That's why I praise you<br />
-                in the noontime.<br />
-</p>
+                in the noontime.
+        </p>
             </div>
 
 </table>
