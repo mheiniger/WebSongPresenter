@@ -1,17 +1,55 @@
-<script src="/socket.io/socket.io.js"></script>
-<script>
-    var socket = io.connect('http://' + window.location.host);
-    socket.on('message', function (data) {
-        if (data == "screen:black"){    
-            document.getElementsByTagName("body")[0].style.backgroundColor = "#000000";
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Songbeamer Anzeige</title>
+    <!link rel='stylesheet' href='/stylesheets/style.css' />
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script>
+        var socket = io.connect('http://' + window.location.host);
+        socket.on('message', function (data) {
+            if (data == "screen:black"){    
+                document.getElementsByTagName("body")[0].style.backgroundColor = "#000000";
+                document.getElementById("content").style.display = "none";
+            }
+            if (data == "screen:off"){    
+                document.getElementsByTagName("body")[0].style.backgroundColor = "#FFFFFF";
+                document.getElementById("content").style.display = "none";
+            }
+            if (data == "screen:presentation"){    
+                document.getElementsByTagName("body")[0].style.backgroundColor = "#FF0000";
+                document.getElementById("content").style.display = "block";
+            }
+        });
+        var resizeMe = function(){
+            //Standard height, for which the body font size is correct
+            var preferredHeight = 768;  
+            var displayHeight = $(window).height();
+            var percentage = displayHeight / preferredHeight;
+            var newFontSize = Math.floor(fontsize * percentage) - 1;
+            $("body").css("font-size", newFontSize + "px");
         }
-        if (data == "screen:off"){    
-            document.getElementsByTagName("body")[0].style.backgroundColor = "#FFFFFF";
-        }
-        if (data == "screen:presentation"){    
-            document.getElementsByTagName("body")[0].style.backgroundColor = "#FF0000";
-        }
-    });
-</script>
+        $(window).bind('resize', function(){ 
+            resizeMe();
+        });
+    </script>
+    <style type="text/css">
+        #content { line-height: 1.5em}
+        #content p { margin: 1px; text-align: center; }
+    </style>
+  </head>
+  <body style="Helvetica,Arial,sans-serif" onload="fontsize = 84;resizeMe();">
+    <div id="content">
+        <p>That's why I praise you<br />
+                in the morning<br />
+                That's why I praise you<br />
+                in the noontime.<br />
+</p>
+            </div>
 
-Anzeige (Vollbild mit F11)
+</table>
+  </body>
+</html>
+
+
+

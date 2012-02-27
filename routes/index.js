@@ -8,7 +8,7 @@ exports.index = function(req, res){
 };
 
 exports.view = function(req, res){
-  res.render('view', { title: 'Web Song Presenter' })
+  res.render('view', { title: 'Web Song Presenter', layout: false })
 };
 
 exports.control = function(req, res){
