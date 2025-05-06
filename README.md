@@ -1,4 +1,8 @@
-##Web Song Presenter
+# Web Song Presenter
+
+> [!IMPORTANT]
+> This Repository is not maintained anymore
+
 
 This is a little nodejs application which aims to display songs to a beamer, only using node for server and two Browsers.
 Different scenarios are possible:
